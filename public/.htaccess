@@ -1,0 +1,10 @@
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteBase /oa/mvc9/public/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?url=$l [QSA,L]
